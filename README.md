@@ -20,7 +20,7 @@ This project demonstrates how to implement server-side pagination in a Next.js a
    npm install
    ```
    
-3. **Run the Development Server to View Example:**
+3. **Run the Development Server:**
    ```bash
    npm run dev
    ```
