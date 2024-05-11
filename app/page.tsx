@@ -15,6 +15,8 @@ interface Props {
 
 export default function Home({ searchParams }: Props) {
   const page = parseInt(searchParams.page) || 1;
+
+  // Change the page size to choose how many items display per page
   const pageSize = 5;
 
   const startIndex = (page - 1) * pageSize;
@@ -22,9 +24,9 @@ export default function Home({ searchParams }: Props) {
 
   return (
     <main>
-      <h1 className="text-xl font-semibold mb-10">Pagination Example</h1>
+      <h1 className="mb-10 text-xl font-semibold">Pagination Example</h1>
 
-      <Table className="sm:w-1/2 mb-10">
+      <Table className="mb-10 w-fit">
         <TableHeader>
           <TableRow>
             <TableHead>Name</TableHead>
@@ -32,10 +34,10 @@ export default function Home({ searchParams }: Props) {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {users.slice(startIndex, endIndex).map((person, idx) => (
+          {users.slice(startIndex, endIndex).map((user, idx) => (
             <TableRow key={idx}>
-              <TableCell className="w-96">{person.name}</TableCell>
-              <TableCell>{person.age}</TableCell>
+              <TableCell className="w-96">{user.name}</TableCell>
+              <TableCell>{user.age}</TableCell>
             </TableRow>
           ))}
         </TableBody>
