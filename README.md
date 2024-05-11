@@ -1,4 +1,4 @@
-# Server-Side Pagination for Next.js App Router Projects.
+# Server-Side Pagination for Next.js App Router Projects
 
 This project demonstrates how to implement server-side pagination in a Next.js application using the App Router. The example focuses on paginating through an array of data, showcasing how to handle URL parameters and fetch the relevant data on each page transition.
 
@@ -24,6 +24,8 @@ This project demonstrates how to implement server-side pagination in a Next.js a
    ```bash
    npm run dev
    ```
+   
+View project on http://localhost:3000/
 
 **Project Structure**
 
