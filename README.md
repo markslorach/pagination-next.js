@@ -30,3 +30,5 @@ This project demonstrates how to implement server-side pagination in a Next.js a
 - `app/page.tsx`: Main page component that handles data fetching and pagination logic.
 - `components/Pagination.tsx`: Reusable Pagination component.
 - `db/exampleData.ts`: Example data used for demonstration.
+  
+![project_example](https://github.com/markslorach/pagination-next.js/assets/15185553/f172ad64-8b65-40f4-95e4-4a020009d411)
