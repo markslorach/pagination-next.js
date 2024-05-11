@@ -1,5 +1,13 @@
 import { people } from "@/lib/data";
 import Pagination from "./components/Pagination";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 interface Props {
   searchParams: { page: string };
@@ -15,15 +23,24 @@ export default function Home({ searchParams }: Props) {
   return (
     <main>
       <h1 className="text-xl font-semibold mb-10">Pagination Example</h1>
-      <section className="mb-10">
-        <ul>
+
+      <Table className="w-1/2 mb-10">
+        <TableHeader>
+          <TableRow>
+            <TableHead>Name</TableHead>
+            <TableHead>Age</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
           {people.slice(startIndex, endIndex).map((person, idx) => (
-            <li key={idx}>
-              {person.name}, {person.age}
-            </li>
+            <TableRow key={idx}>
+              <TableCell className="w-96">{person.name}</TableCell>
+              <TableCell>{person.age}</TableCell>
+            </TableRow>
           ))}
-        </ul>
-      </section>
+        </TableBody>
+      </Table>
+
       <Pagination
         itemCount={people.length}
         pageSize={pageSize}
