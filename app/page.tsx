@@ -24,7 +24,7 @@ export default function Home({ searchParams }: Props) {
     <main>
       <h1 className="text-xl font-semibold mb-10">Pagination Example</h1>
 
-      <Table className="w-1/2 mb-10">
+      <Table className="sm:w-1/2 mb-10">
         <TableHeader>
           <TableRow>
             <TableHead>Name</TableHead>
