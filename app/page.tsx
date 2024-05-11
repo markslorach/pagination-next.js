@@ -1,4 +1,4 @@
-import { people } from "@/lib/data";
+import { users } from "@/db/exampleData";
 import Pagination from "./components/Pagination";
 import {
   Table,
@@ -32,7 +32,7 @@ export default function Home({ searchParams }: Props) {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {people.slice(startIndex, endIndex).map((person, idx) => (
+          {users.slice(startIndex, endIndex).map((person, idx) => (
             <TableRow key={idx}>
               <TableCell className="w-96">{person.name}</TableCell>
               <TableCell>{person.age}</TableCell>
@@ -42,7 +42,7 @@ export default function Home({ searchParams }: Props) {
       </Table>
 
       <Pagination
-        itemCount={people.length}
+        itemCount={users.length}
         pageSize={pageSize}
         currentPage={page}
       />
